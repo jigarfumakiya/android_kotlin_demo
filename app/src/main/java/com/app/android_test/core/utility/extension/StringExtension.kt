@@ -1,4 +1,4 @@
-package com.app.android_test.helpers.extension
+package com.app.android_test.core.utility.extension
 
 /**
  * @Author: Jigar Fumakiya

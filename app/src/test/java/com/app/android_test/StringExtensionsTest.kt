@@ -5,7 +5,7 @@ package com.app.android_test
  * @Date: 01/12/24
  */
 
-import com.app.android_test.helpers.extension.countVowels
+import com.app.android_test.core.utility.extension.countVowels
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

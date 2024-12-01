@@ -1,9 +1,9 @@
-package com.app.android_test.ui
+package com.app.android_test.features
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.app.android_test.databinding.ActivityMainBinding
-import com.app.android_test.helpers.binding.viewBinding
+import com.app.android_test.core.utility.binding.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 

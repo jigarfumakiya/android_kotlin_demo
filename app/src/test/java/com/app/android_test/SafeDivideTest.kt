@@ -5,7 +5,7 @@ package com.app.android_test
  * @Date: 01/12/24
  */
 
-import com.app.android_test.helpers.safeDivide
+import com.app.android_test.core.utility.safeDivide
 import org.junit.Assert.*
 import org.junit.Test
 

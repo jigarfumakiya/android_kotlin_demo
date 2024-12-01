@@ -1,4 +1,4 @@
-package com.app.android_test.helpers.binding
+package com.app.android_test.core.utility.binding
 
 import android.view.View
 import androidx.fragment.app.Fragment

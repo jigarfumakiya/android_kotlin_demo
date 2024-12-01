@@ -1,4 +1,4 @@
-package com.app.android_test.helpers.binding
+package com.app.android_test.core.utility.binding
 
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity

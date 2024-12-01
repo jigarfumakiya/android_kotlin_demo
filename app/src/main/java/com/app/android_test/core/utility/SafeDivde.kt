@@ -1,4 +1,4 @@
-package com.app.android_test.helpers
+package com.app.android_test.core.utility
 
 /**
  * @Author: Jigar Fumakiya
