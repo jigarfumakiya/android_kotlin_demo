@@ -6,6 +6,7 @@ plugins {
 //    alias(libs.plugins.ksp)
     id 'org.jetbrains.kotlin.kapt'
     id "kotlin-parcelize"
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -71,6 +72,14 @@ dependencies {
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
 
+    //  Navigation
+    implementation libs.androidx.navigation.dynamic.features
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
+    implementation libs.androidx.navigation.testing
+
+
+
     // Serialization
     implementation libs.kotlinx.serialization.json
 
@@ -84,6 +93,11 @@ dependencies {
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
+    // Network
+    implementation libs.retrofit
+    implementation libs.retrofit.jackson
+    implementation libs.gson
+    implementation libs.okhttp.logging
 
     // Dagger
     implementation libs.dagger.hilt.android
