@@ -7,7 +7,10 @@ package com.app.android_test.core.app
 sealed class Result<out T : Any> {
 
     object Loading : Result<Nothing>()
-    data class Success<out T : Any>(val data: T) : Result<T>()
+//    data class Success<out T : Any>(val data: T) : Result<T>()
+
+    data class Success<out T : Any>(val data: T) : Result<T>() // Represents a success state
+
     data class Error(val exception: Exception) : Result<Nothing>()
 
     override fun toString(): String {

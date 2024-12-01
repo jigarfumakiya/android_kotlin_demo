@@ -4,6 +4,7 @@ import com.app.android_test.core.app.Result
 import com.app.android_test.core.utility.exception.getException
 import com.app.android_test.data.repository.news.NewsRepository
 import com.app.android_test.domain.model.ArticleDomain
+import dagger.hilt.android.scopes.ViewModelScoped
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
@@ -13,6 +14,7 @@ import javax.inject.Inject
  * @Date: 01/12/24
  */
 
+@ViewModelScoped
 class NewsUseCase @Inject constructor(
    private  val newsRepository: NewsRepository
 ){

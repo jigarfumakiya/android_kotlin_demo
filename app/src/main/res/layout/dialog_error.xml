@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/size_medium"
+    android:paddingTop="@dimen/size_medium_to_large"
+    android:paddingEnd="@dimen/size_medium"
+    android:paddingBottom="@dimen/size_medium_to_large">
+
+    <TextView
+        android:id="@+id/dialogErrorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Test error" />
+
+    <TextView
+        android:id="@+id/dialogErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_x_small"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogErrorTitle"
+        tools:text="This is error message" />
+
+    <TextView
+        android:id="@+id/dialogErrorOkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_medium_to_large"
+        android:text="@android:string/ok"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogErrorMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

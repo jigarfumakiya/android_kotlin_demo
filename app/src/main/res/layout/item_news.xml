@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemNews"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_10"
+    android:layout_margin="@dimen/size_8">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/newsImageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/newsTitleTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:maxLines="2"
+        android:padding="@dimen/size_2"
+        android:text="U.S. stocks are mixed as investors assess economic data"
+        android:textSize="@dimen/font_size_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/newsImageview" />
+
+    <TextView
+        android:id="@+id/newsDescTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_4"
+        android:maxLines="4"
+        android:text="Dow Jones rises 0.3%, SP 500 is up 0.2% and Nasdaq Composite falls 0.1%"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintTop_toBottomOf="@id/newsTitleTextview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

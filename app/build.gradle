@@ -91,6 +91,9 @@ dependencies {
     // Dagger
     implementation libs.dagger.hilt.android
     kapt libs.hilt.compiler
+
+    implementation libs.glide.image
+
     //Tetsing
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
