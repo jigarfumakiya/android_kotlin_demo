@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">android_test</string>
-    <string name="setting">setting\n</string>
-    <string name="home">home</string>
+    <string name="app_name">Android Demo</string>
+    <string name="setting">Setting</string>
+    <string name="home">Home</string>
     <string name="top_stories">Top Stories</string>
     <string name="error">Error</string>
     <string name="something_went_wrong">Something went wrong</string>

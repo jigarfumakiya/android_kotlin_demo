@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Android_test" parent="Theme.Material3.Light.NoActionBar" />
+    <style name="Theme.Android_test" parent="Theme.Material3.Light.NoActionBar" >
+        <item name="android:statusBarColor">@color/grey</item>
+    </style>
 
     <!--   Splash screen theme  -->
     <style name="Theme.Bits.Starting" parent="Theme.SplashScreen">

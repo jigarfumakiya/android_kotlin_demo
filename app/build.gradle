@@ -93,6 +93,7 @@ dependencies {
     kapt libs.hilt.compiler
 
     implementation libs.glide.image
+    annotationProcessor libs.glide.annotationProcessor
 
     //Tetsing
     testImplementation libs.junit
