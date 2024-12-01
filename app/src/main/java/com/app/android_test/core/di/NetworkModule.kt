@@ -1,7 +1,7 @@
-package com.app.android_test.di
+package com.app.android_test.core.di
 
-import com.app.android_test.core.network.Api
-import com.app.android_test.core.network.AuthenticationInterceptor
+import com.app.android_test.data.network.Api
+import com.app.android_test.data.network.AuthenticationInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

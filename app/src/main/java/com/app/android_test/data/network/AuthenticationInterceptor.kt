@@ -1,4 +1,4 @@
-package com.app.android_test.core.network
+package com.app.android_test.data.network
 
 import android.app.Application
 import android.content.Context

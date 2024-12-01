@@ -5,6 +5,9 @@ package com.app.android_test.core.utility.extension
  * @Date: 01/12/24
  */
 
+fun String?.toEmpty() =
+    this ?: ""
+
 // Extension function to count vowels in a String
 fun String.countVowels(): Int {
     val vowels = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
