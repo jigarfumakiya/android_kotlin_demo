@@ -15,17 +15,13 @@
         app:title="@string/setting"
         app:titleCentered="true" />
 
-
-    <TextView
-        android:id="@+id/logoutTextView"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logoutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_margin="@dimen/size_8"
-        android:drawableStart="@android:drawable/ic_lock_lock"
-        android:gravity="center_vertical"
-        android:padding="@dimen/size_8"
-        android:text="@string/logout" />
+        android:text="@string/logout"
+        />
 
 
 </LinearLayout>

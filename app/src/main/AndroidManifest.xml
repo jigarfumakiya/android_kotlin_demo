@@ -14,16 +14,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Android_test"
+        android:theme="@style/Theme.Android.Starting"
         tools:targetApi="31">
-        <activity
-            android:name=".features.home.Home"
-            android:exported="false" />
+
         <activity
             android:name=".features.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Android_test">
+            android:theme="@style/Theme.Android.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,15 +7,13 @@ import androidx.fragment.app.viewModels
 import com.app.android_test.R
 import com.app.android_test.core.utility.binding.viewBinding
 import com.app.android_test.databinding.FragmentSettingBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SettingFragment : Fragment(R.layout.fragment_setting) {
     private val binding by viewBinding(FragmentSettingBinding::bind)
     private val viewModel: SettingViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setupViews()
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,7 +23,7 @@ class SettingFragment : Fragment(R.layout.fragment_setting) {
 
     private fun setupViews() {
         with(binding) {
-            logoutTextView.setOnClickListener {
+            logoutButton.setOnClickListener {
                 viewModel.logout()
             }
         }

@@ -1,6 +1,8 @@
 package com.app.android_test.features
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
@@ -10,10 +12,6 @@ import com.app.android_test.R
 import com.app.android_test.core.utility.binding.viewBinding
 import com.app.android_test.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -23,15 +21,18 @@ class MainActivity : AppCompatActivity() {
     private var isReady = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         val splashScreen = installSplashScreen()
         splashScreen.setKeepOnScreenCondition { !isReady }
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(1000)
-            isReady = true
-            setupBottomNavigation();
-        }
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+        setupBottomNavigation();
+        checkUserDetails()
+    }
+
+    private fun checkUserDetails() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            isReady = true;
+        }, 2000)
     }
 
 

@@ -24,7 +24,10 @@
         android:theme="@style/BottomNavigationTheme"
         android:visibility="visible"
         app:elevation="0dp"
-        app:itemRippleColor="@color/pastel_green"
+        app:itemIconTint="@drawable/bottom_nav_color"
+        app:itemTextColor="@drawable/bottom_nav_color"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:itemRippleColor="@color/teal_200"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation" />
