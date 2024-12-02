@@ -33,7 +33,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             loginButton.setOnClickListener {
                 val name = nameEditText.text.toString()
                 if (name.isEmpty()) {
-                    SnackbarUtils.showSnackbar(binding.root, "Please enter name")
+                    SnackbarUtils.showSnackbar(binding.root, getString(R.string.name))
                     return@setOnClickListener
                 }
                 saveUserDetails(name)
