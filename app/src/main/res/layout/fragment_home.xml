@@ -32,16 +32,18 @@
         tools:listitem="@layout/item_news" />
 
 
-    <com.google.android.material.progressindicator.CircularProgressIndicator
+    <ProgressBar
         android:id="@+id/progress_circular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:indicatorColor="@color/cardview_dark_background"
+        android:visibility="visible"
+        app:indicatorSize="@dimen/size_40"
+        app:trackThickness="@dimen/size_4"
+        app:indicatorColor="@color/grey"
         app:layout_constraintBottom_toBottomOf="@+id/storiesRecyclerview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:trackColor="@color/purple_200" />
+        app:trackColor="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

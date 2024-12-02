@@ -5,4 +5,5 @@
     <string name="top_stories">Top Stories</string>
     <string name="error">Error</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="logout">Logout</string>
 </resources>

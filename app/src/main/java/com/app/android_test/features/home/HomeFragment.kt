@@ -2,6 +2,7 @@ package com.app.android_test.features.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -46,8 +47,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                         }
 
                         is com.app.android_test.core.app.Result.Success -> {
-                            hideSkeleton()
                             loadData(it.data)
+                            hideSkeleton()
                         }
 
                         is com.app.android_test.core.app.Result.Error -> {
@@ -60,11 +61,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun hideSkeleton() {
-        binding.progressCircular.isEnabled = false
+        binding.progressCircular.isVisible = false
     }
 
     private fun showSkeleton() {
-        binding.progressCircular.isEnabled = true
+        binding.progressCircular.isVisible = true
     }
 
     private fun loadData(data: List<ArticleDomain>) {

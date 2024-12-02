@@ -26,11 +26,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val splashScreen = installSplashScreen()
-        splashScreen.setKeepOnScreenCondition {
-            !isReady
-        }
+        splashScreen.setKeepOnScreenCondition { !isReady }
         CoroutineScope(Dispatchers.Main).launch {
-            delay(5000)
+            delay(1000)
             isReady = true
             setupBottomNavigation();
         }
