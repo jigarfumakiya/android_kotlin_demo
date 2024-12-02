@@ -3,6 +3,7 @@ package com.app.android_test.features
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -32,31 +33,35 @@ class MainActivity : AppCompatActivity() {
         splashScreen.setKeepOnScreenCondition { !isReady }
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setupBottomNavigation();
         checkUserDetails()
     }
 
     private fun checkUserDetails() {
         Handler(Looper.getMainLooper()).postDelayed({
             isReady = true
-            val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
             lifecycleScope.launch {
                 val isLoggedIn = viewModel.userLogged()
                 if (isLoggedIn) {
-                    navGraph.setStartDestination(R.id.nav_home)
+                    Log.d("User", "user is logged")
+                    setupBottomNavigation(R.id.nav_home)
                 } else {
-                    navGraph.setStartDestination(R.id.welcomeFragment)
+                    Log.d("User", "user not is logged")
+                    setupBottomNavigation(R.id.welcomeFragment)
                 }
             }
         }, 2000)
     }
 
 
-    private fun setupBottomNavigation() {
+    private fun setupBottomNavigation(destination: Int) {
         val navHostFragment: NavHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
         binding.bottomNavigationView.setupWithNavController(navController)
+        val navInflater = navController.navInflater
+        val navGraph = navInflater.inflate(R.navigation.nav_graph)
+        navGraph.setStartDestination(destination)
+        navController.graph = navGraph
         binding.bottomNavigationView.setOnItemReselectedListener {
             // when user click on same item do nothing
         }

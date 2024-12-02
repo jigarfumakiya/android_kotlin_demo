@@ -21,7 +21,11 @@
         android:id="@+id/nav_setting"
         android:name="com.app.android_test.features.setting.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_nav_setting_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.app.android_test.features.welcome.WelcomeFragment"

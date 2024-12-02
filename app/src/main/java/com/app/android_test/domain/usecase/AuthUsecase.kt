@@ -21,7 +21,7 @@ class AuthUsecase @Inject constructor(
     suspend fun saveUser(name: String): Result<Unit> {
         return try {
             val result = authRepository.saveUser(name)
-            Result.Success(Unit)
+            Result.Success(result)
         } catch (ioException: IOException) {
             Result.Error(ioException)
         } catch (exception: HttpException) {
@@ -40,8 +40,19 @@ class AuthUsecase @Inject constructor(
         }
     }
 
-   suspend fun userLogged():Boolean{
+    suspend fun userLogged(): Boolean {
         return authRepository.userLogged()
+    }
+
+    suspend fun logout():Result<Unit> {
+        return try {
+            val result = authRepository.logout()
+            Result.Success(result)
+        } catch (ioException: IOException) {
+            Result.Error(ioException)
+        } catch (exception: HttpException) {
+            Result.Error(exception.getException())
+        }
     }
 
 }

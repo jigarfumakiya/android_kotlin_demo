@@ -36,4 +36,8 @@ class AuthRepositoryImpl @Inject constructor(
     override suspend fun userLogged(): Boolean {
         return userDao.userLogged()
     }
+
+    override suspend fun logout() {
+        return userDao.clearUser()
+    }
 }

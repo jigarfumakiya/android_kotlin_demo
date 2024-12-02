@@ -10,5 +10,7 @@ import com.app.android_test.domain.model.UserDomain
 interface AuthRepository {
     suspend fun saveUser(name: String)
     suspend fun getUser(): UserDomain
-   suspend fun userLogged(): Boolean
+    suspend fun userLogged(): Boolean
+
+    suspend fun logout()
 }
