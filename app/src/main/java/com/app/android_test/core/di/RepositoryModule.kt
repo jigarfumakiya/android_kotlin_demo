@@ -1,5 +1,7 @@
 package com.app.android_test.core.di
 
+import com.app.android_test.data.repository.auth.AuthRepository
+import com.app.android_test.data.repository.auth.AuthRepositoryImpl
 import com.app.android_test.data.repository.news.NewsRepository
 import com.app.android_test.data.repository.news.NewsRepositoryImpl
 import dagger.Binds
@@ -15,4 +17,9 @@ abstract class RepositoryModule {
     abstract fun bindNewsRepository(
         newsRepositoryImpl: NewsRepositoryImpl,
     ): NewsRepository
+
+    @Binds
+    abstract fun bindAuthRepository(
+        authRepositoryImpl: AuthRepositoryImpl
+    ): AuthRepository
 }

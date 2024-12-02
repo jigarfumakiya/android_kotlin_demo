@@ -6,4 +6,7 @@
     <string name="error">Error</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="logout">Logout</string>
+    <string name="welcome">Welcome</string>
+    <string name="name">Enter Name</string>
+    <string name="login">Login</string>
 </resources>

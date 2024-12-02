@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
-//    alias(libs.plugins.ksp)
+    alias(libs.plugins.ksp)
     id 'org.jetbrains.kotlin.kapt'
     id "kotlin-parcelize"
     id 'androidx.navigation.safeargs.kotlin'
@@ -82,7 +82,10 @@ dependencies {
     // Room
     implementation libs.room.runtime
     implementation libs.room.ktx
+    implementation libs.room.coroutines
     kapt libs.room.compiler
+    annotationProcessor libs.room.compiler
+
     // Network
     implementation libs.retrofit
     implementation libs.retrofit.jackson
