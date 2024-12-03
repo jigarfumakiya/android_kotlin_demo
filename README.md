@@ -1,5 +1,7 @@
 # Android Kotlin Demo
-This is a demo Android application built using **Kotlin** that follows **Clean Architecture** principles. The application is designed to be scalable, maintainable, and easily extendable. It uses modern Android libraries and tools such as **Hilt**, **Retrofit**, and **Navigation** to ensure efficient development and maintainability.App that fetch some news from [news.api](https://newsapi.org)
+This is a demo Android application built using **Kotlin**, designed to showcase the implementation of **Clean Architecture** principles. The app emphasizes scalability, maintainability, and extensibility, making it an excellent foundation for building robust Android applications.
+The app fetches and displays news articles from [News API](https://newsapi.org), leveraging modern Android libraries and tools to ensure efficient development. Key technologies include **Hilt** for dependency injection, **Retrofit** for network communication, and **Navigation** components for seamless screen transitions.
+
 
 ## Architecture
 

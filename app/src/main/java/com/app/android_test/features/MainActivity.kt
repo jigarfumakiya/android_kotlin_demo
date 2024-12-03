@@ -37,19 +37,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUserDetails() {
-        Handler(Looper.getMainLooper()).postDelayed({
-            isReady = true
-            lifecycleScope.launch {
-                val isLoggedIn = viewModel.userLogged()
-                if (isLoggedIn) {
-                    Log.d("User", "user is logged")
-                    setupBottomNavigation(R.id.nav_home)
-                } else {
-                    Log.d("User", "user not is logged")
-                    setupBottomNavigation(R.id.welcomeFragment)
-                }
+        lifecycleScope.launch {
+            val isLoggedIn = viewModel.userLogged()
+            if (isLoggedIn) {
+                Log.d("User", "user is logged")
+                setupBottomNavigation(R.id.nav_home)
+            } else {
+                Log.d("User", "user not is logged")
+                setupBottomNavigation(R.id.welcomeFragment)
             }
-        }, 2000)
+        }
+
+
     }
 
 
@@ -62,6 +61,8 @@ class MainActivity : AppCompatActivity() {
         val navGraph = navInflater.inflate(R.navigation.nav_graph)
         navGraph.setStartDestination(destination)
         navController.graph = navGraph
+        //Add deal to avoid flicker of previous screen
+        Handler(Looper.getMainLooper()).postDelayed({ isReady = true }, 800)
         binding.bottomNavigationView.setOnItemReselectedListener {
             // when user click on same item do nothing
         }
